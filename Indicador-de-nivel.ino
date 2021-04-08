@@ -1,8 +1,8 @@
-static unsigned int l1 = 2; //switch límite del porton
-static unsigned int l2 = 3; // boton de paro de emergencia
-static unsigned int l3 = 4; //switch límite del porton
-static unsigned int l4 = 5; // accionamiento externo con otra señal, que puede ser de 110 VCA
-static unsigned int l5 = 6 ; // salida de giro
+static unsigned int l1 = 2; //nivel 20
+static unsigned int l2 = 3; //nivel 40
+static unsigned int l3 = 4; //snivel 60
+static unsigned int l4 = 5; // nivel 80
+static unsigned int l5 = 6 ; // nivel 100
 
 int L1 = 0;
 int L2 = 0;
