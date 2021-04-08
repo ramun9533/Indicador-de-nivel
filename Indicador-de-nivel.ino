@@ -31,20 +31,25 @@ void loop() {
   }
   if (L1 and !L2 and !L3 and !L4 and !L5)
   {
-    nivel = 25;
+    nivel = 20;
   }
   if (L1 and L2 and !L3 and !L4 and !L5)
   {
-    nivel = 50;
+    nivel = 40;
   }
   if (L1 and L2 and L3 and !L4 and !L5)
-  { nivel = 75;
+  { nivel = 60;
   }
 
   if (L1 and L2 and L3 and L4 and !L5)
+  { nivel = 80;
+
+  }
+  if (L1 and L2 and L3 and L4 and L5)
   { nivel = 100;
 
   }
+  
   Serial.println ("Nivel");
   Serial.println (nivel);
   delay (1000);
