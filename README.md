@@ -4,11 +4,11 @@ El "Indicador de nivel remoto" es un proyecto que se basa en la plataforma Ardui
 
 Dicho proyecto consta de de los siguientes componentes:
 
--Tarjeta Arduino (Nano)
--Cable UTP (longitud varia segun ubicacion de deposito)
--Contrapeso para soporte del cable UTP
--Fuente de limentacion de 5 VCD
--Cable Micro USB para conneccion a PC.
+- Tarjeta Arduino (Nano)
+- Cable UTP (longitud varia segun ubicacion de deposito)
+- Contrapeso para soporte del cable UTP
+- Fuente de limentacion de 5 VCD
+- Cable Micro USB para conneccion a PC.
 
 _Lista de software usado_
   - IDE arduino(en PC) 
