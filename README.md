@@ -12,8 +12,7 @@ Dicho proyecto consta de de los siguientes componentes:
 
 _Lista de software usado_
   - IDE arduino(en PC) 
-  - Bluetooth Serial Controller (en cell con android) 
-  - Bluetooth Terminal (en cell con android)
+  
 
 ## contribuidores
 [Ramun](https://github.com/ramun9533)
