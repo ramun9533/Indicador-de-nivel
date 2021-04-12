@@ -49,6 +49,17 @@ void loop() {
   { nivel = 100;
 
   }
+// Mensaje de error, cuando el sensor no indica señal lineal y se brinca bits
+ if (   !((L1 and L2 and L3 and L4 and L5) or 
+           (L1 and L2 and L3 and L4 and !L5) or
+           (L1 and L2 and L3 and !L4 and !L5) or
+           (L1 and L2 and !L3 and !L4 and !L5) or
+           (L1 and !L2 and !L3 and !L4 and !L5) or
+           (!L1 and !L2 and !L3 and !L4 and !L5)  ) )
+
+  {
+    Serial.println ("Error");
+  }
   
   Serial.println ("Nivel");
   Serial.println (nivel);
