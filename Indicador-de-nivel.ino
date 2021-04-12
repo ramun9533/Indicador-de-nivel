@@ -58,7 +58,7 @@ void loop() {
            (!L1 and !L2 and !L3 and !L4 and !L5)  ) )
 
   {
-    Serial.println ("Error");
+    Serial.println ("Error, revise el sistema comenzando por el sensor indicador");
   }
   
   Serial.println ("Nivel");
