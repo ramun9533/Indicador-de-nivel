@@ -12,6 +12,7 @@ Dicho proyecto consta de de los siguientes componentes:
 
 _Lista de software usado_
   - IDE arduino(en PC) 
+  - Processing
   
 
 ## contribuidores
