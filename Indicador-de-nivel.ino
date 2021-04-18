@@ -11,7 +11,7 @@ static unsigned int o5 = 11 ; //
 static unsigned int o6 = 12 ;
 int L1, L2, L3, L4, L5 = 0; //variables donde guardare las entradas para hacer la logica
 int O1, O2, O3, O4, O5, O6, nivel, nivel1 = 0; // variables donde reflegare las entradas en forma de salidas, y "nivel" donde guardare el nivel
-
+char nivel3;
 void setup() {
   Serial.begin (9600);
   pinMode(l1, INPUT);
@@ -30,7 +30,7 @@ void setup() {
 
 void func1 (void)
 {
-  Serial.println (nivel);
+  Serial.println (nivel3);
   return;
 }
 
@@ -47,27 +47,31 @@ void loop() {
   if (!L1 and !L2 and !L3 and !L4 and !L5) //inicia el algebra boleana
   {
     nivel = 0;
+    nivel3 = 'A';
   }
 
   if (L1 and !L2 and !L3 and !L4 and !L5)
   {
     nivel = 1;
+    nivel3 = 'B';
   }
   if (L1 and L2 and !L3 and !L4 and !L5)
   {
     nivel = 2;
+    nivel3 = 'C'; 
   }
   if (L1 and L2 and L3 and !L4 and !L5)
   { nivel = 3;
+    nivel3 = 'D';
   }
 
   if (L1 and L2 and L3 and L4 and !L5)
   { nivel = 4;
-
+    nivel3 = 'E';
   }
   if (L1 and L2 and L3 and L4 and L5)
   { nivel = 5;
-
+    nivel3 = 'F';
   }
   if (   !((L1 and L2 and L3 and L4 and L5) or
            (L1 and L2 and L3 and L4 and !L5) or
@@ -76,7 +80,8 @@ void loop() {
            (L1 and !L2 and !L3 and !L4 and !L5) or
            (!L1 and !L2 and !L3 and !L4 and !L5)  ) )
   { nivel = 6;
-    Serial.println (6);
+    //nivel3 = 'G';
+    Serial.println ('G');
     //   Serial.println ("Error, revise el sistema comenzando por el sensor indicador"); // modificar secuencuia de error
     digitalWrite(o6, HIGH);
     delay(250);
