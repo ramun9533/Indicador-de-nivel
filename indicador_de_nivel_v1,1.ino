@@ -44,33 +44,34 @@ void loop() {
   digitalWrite(Lednivel3, Nivel3);
   digitalWrite(Lednivel4, Nivel4);
   digitalWrite(Lednivel5, Nivel5);
-  if (!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) //inicia el algebra boleana
+ 
+ if (!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) //inicia el algebra boleana
   {
     nivel = 0;
     nivelchar = 'A';
   }
 
-  if (Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5)
+  if (Nivel1)
   {
     nivel = 1;
     nivelchar  = 'B';
   }
-  if (Nivel1 and Nivel2 and !Nivel3 and !Nivel4 and !Nivel5)
+  if (Nivel2)
   {
     nivel = 2;
     nivelchar  = 'C';
   }
-  if (Nivel1 and Nivel2 and Nivel3 and !Nivel4 and !Nivel5)
+  if (Nivel3)
   { nivel = 3;
 
   nivelchar = 'D';
   }
 
-  if (Nivel1 and Nivel2 and Nivel3 and Nivel4 and !Nivel5)
+  if (Nivel4)
   { nivel = 4;
 nivelchar = 'E';
   }
-  if (Nivel1 and Nivel2 and Nivel3 and Nivel4 and Nivel5)
+  if (Nivel5)
   { nivel = 5;
 nivelchar  = 'F';
   }
