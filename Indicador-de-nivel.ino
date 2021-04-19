@@ -25,13 +25,12 @@ void setup() {
   pinMode(o4, OUTPUT);
   pinMode(o5, OUTPUT);
   pinMode(o6, OUTPUT);
-  Serial.println (nivel);
+
 }
 
-void func1 (void)
+void Imprime ()
 {
   Serial.println (nivel3);
-  return;
 }
 
 void loop() {
@@ -50,37 +49,37 @@ void loop() {
     nivel3 = 'A';
   }
 
-  if (L1 and !L2 and !L3 and !L4 and !L5)
+  if (L1 == 1)
   {
-    nivel = 1;
+    nivel = 20;
     nivel3 = 'B';
   }
-  if (L1 and L2 and !L3 and !L4 and !L5)
+  if (L2 == 1)
   {
-    nivel = 2;
-    nivel3 = 'C'; 
+    nivel = 40;
+    nivel3 = 'C';
   }
-  if (L1 and L2 and L3 and !L4 and !L5)
-  { nivel = 3;
+  if (L3 == 1)
+  { nivel = 60;
     nivel3 = 'D';
   }
 
-  if (L1 and L2 and L3 and L4 and !L5)
-  { nivel = 4;
+  if (L4 == 1)
+  { nivel = 80;
     nivel3 = 'E';
   }
-  if (L1 and L2 and L3 and L4 and L5)
+  if (L5 == 1)
   { nivel = 5;
     nivel3 = 'F';
   }
-  if (   !((L1 and L2 and L3 and L4 and L5) or
-           (L1 and L2 and L3 and L4 and !L5) or
-           (L1 and L2 and L3 and !L4 and !L5) or
-           (L1 and L2 and !L3 and !L4 and !L5) or
-           (L1 and !L2 and !L3 and !L4 and !L5) or
-           (!L1 and !L2 and !L3 and !L4 and !L5)  ) )
-  { nivel = 6;
-    //nivel3 = 'G';
+  if (!((L1 and L2 and L3 and L4 and L5) or
+        (L1 and L2 and L3 and L4 and !L5) or
+        (L1 and L2 and L3 and !L4 and !L5) or
+        (L1 and L2 and !L3 and !L4 and !L5) or
+        (L1 and !L2 and !L3 and !L4 and !L5) or
+        (!L1 and !L2 and !L3 and !L4 and !L5)  ) )
+  {
+    nivel = 6;
     Serial.println ('G');
     //   Serial.println ("Error, revise el sistema comenzando por el sensor indicador"); // modificar secuencuia de error
     digitalWrite(o6, HIGH);
@@ -89,10 +88,9 @@ void loop() {
     delay(250);
   }
   if (nivel1 != nivel)                                   // hace algo diferente
-  { // hace algo diferente
-    func1();                                          // hace algo diferente
-    //delay (2000);                                             // hace algo diferente
+  {
+    Imprime ();                                          // hace algo diferente
+    delay (1000);                                             // hace algo diferente
   }
-
   nivel1 = nivel;
 }
