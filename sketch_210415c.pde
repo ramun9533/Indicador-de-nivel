@@ -1,20 +1,20 @@
 import processing.serial.*;
 
-Serial myPort;  
+Serial PuertoMio;  
 char val;      // 
 
 void setup() 
 {
   size(200, 200);
 
-  String portName = Serial.list()[0];
-  myPort = new Serial(this, portName, 9600);
+  String NombrePuerto = Serial.list()[0];
+  PuertoMio = new Serial(this, NombrePuerto, 9600);
 }
 
 void draw()
 {
-  if ( myPort.available() > 0) {  // 
-    val = myPort.readChar();         //
+  if ( PuertoMio.available() > 0) {  // 
+    val = PuertoMio.readChar();         //
   }
   background(0);             // 
 
