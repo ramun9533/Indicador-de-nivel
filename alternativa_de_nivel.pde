@@ -1,57 +1,72 @@
-float a;
-import processing.serial.*;
-int b, i = 0;
-Serial PuertoMio;  
+float Nivel;
+float NivelMaximo = 5;
+float NivelMinimo = 0;
+boolean Error = false;
+//import processing.serial.*;
+int i = 0;
+color ColorFondo = color(204, 255, 0);
+color FondoNivel = color(0, 0, 0);
+color ColorNivel = color(50, 50, 200);
+color ColorError = color(255, 0, 0);
+//Serial PuertoMio;  
 char val;      // 
 void setup() {
   size(640, 360);
-  String portName = Serial.list()[0];
-  PuertoMio = new Serial(this, portName, 9600);
-  stroke(255);
-  a = 360;
+  //String portName = Serial.list()[0];
+  //PuertoMio = new Serial(this, portName, 9600);
+  Nivel = NivelMinimo;
 }
-void draw() {
-  background(b);
-  line(0, a, width, a); 
 
-  if ( PuertoMio.available() > 0) {  // 
-    val = PuertoMio.readChar();         //
-  }
-  //background(0);             // 
-  switch(val)
-  {
+void draw() {
+
+
+  //if ( PuertoMio.available() > 0) {  
+  //  val = PuertoMio.readChar(); 
+  //}
+  //background(0);      
+  //  N;1 
+  // N;3
+  // E;1 
+  switch(val) {
   case 'A': 
-    //fill(#FA1A05); 
-    a = 360;
+    Nivel = 0;
+    Error = false;
     break;
   case 'B': 
-    a = 288;
-    //fill(#E5FA05); 
+    Nivel = 1;
+    Error = false;
     break;
   case 'C': 
-    a = 216;
-    //fill(#24FA05); 
+    Nivel = 2;
+    Error = false;
     break;
   case 'D': 
-    a = 144;
-    ////fill(#05FAEC); 
+    Nivel = 3;
+    Error = false;
     break;
   case 'E': 
-    a = 72;
-    // fill(#0513FA); 
+    Nivel = 4;
+    Error = false;
     break;
   case 'F': 
-    a = 0;
-    //fill(#CC05FA); 
+    Nivel = 5;
+    Error = false;
     break;
   case 'G': 
-    for (i = 0; i < 755; i++) {
-      if (i <= 754) {
-        b += 1;
-      }
-    } 
-    delay (500);
+    Error = true;
     break;
   }
-  line(0, a, width, a);
+
+  if (Error) {
+    background(ColorError);
+  } else {
+    float NivelCuadro = map(Nivel, NivelMinimo, NivelMaximo, height, 0);
+    NivelCuadro = constrain(NivelCuadro, 0, height);
+
+    background(ColorFondo);
+    fill(FondoNivel);
+    rect(width/2, 0, width/2, height);
+    fill(ColorNivel);
+    rect(width/2, NivelCuadro, width/2, height);
+  }
 }
