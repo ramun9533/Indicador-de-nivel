@@ -21,3 +21,5 @@ _Lista de software usado_
 ### Video de prueba de proyecto
 
 https://www.youtube.com/watch?v=H1_xro6Aft4
+
+https://www.youtube.com/watch?v=GsrBn9ZmaTI
