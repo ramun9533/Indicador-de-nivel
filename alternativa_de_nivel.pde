@@ -1,6 +1,7 @@
 import meter.*;
 Meter mx;
 int Nivel =0; 
+char val;      // guardar dato serie
 import processing.serial.*;
 color ColorError = color (0, 0, 0);
 Serial PuertoMio;  
