@@ -19,8 +19,9 @@ _Lista de software usado_
 [Ramun](https://github.com/ramun9533)
 
 ### Video de prueba de proyecto
-<a href="https://www.youtube.com/watch?v=H1_xro6Aft4">Primeras pruebas</a>
-<a href="https://www.youtube.com/watch?v=GsrBn9ZmaTI">Primeras Mediciones</a>
+_Lista de Video prueba/evidencia_
+- <a href="https://www.youtube.com/watch?v=H1_xro6Aft4">Primeras pruebas</a>
+- <a href="https://www.youtube.com/watch?v=GsrBn9ZmaTI">Primeras Mediciones</a>
 
 
 
