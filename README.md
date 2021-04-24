@@ -19,7 +19,7 @@ _Lista de software usado_
 [Ramun](https://github.com/ramun9533)
 
 ### Video de prueba de proyecto
+<a href="https://www.youtube.com/watch?v=H1_xro6Aft4">Primeras pruebas</a>
 
-https://www.youtube.com/watch?v=H1_xro6Aft4
 
 https://www.youtube.com/watch?v=GsrBn9ZmaTI
