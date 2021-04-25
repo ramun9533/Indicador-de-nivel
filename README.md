@@ -1,5 +1,5 @@
 # _Indicador-de-nivel_
-El "Indicador de nivel remoto" es un proyecto que se basa en la plataforma Arduino para poder visualizar el nivel de un recipiente con agua de forma remota.
+El "Indicador de nivel remoto" es un proyecto que se basa en la plataforma Arduino y Processing, para poder visualizar el nivel de un recipiente con agua (puede ser otro material) de forma remota.
 
 
 Dicho proyecto consta de de los siguientes componentes:
