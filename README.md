@@ -22,6 +22,6 @@ _Lista de software usado_
 _Lista de Video prueba/evidencia_
 - <a href="https://www.youtube.com/watch?v=H1_xro6Aft4">Primeras pruebas</a>
 - <a href="https://www.youtube.com/watch?v=GsrBn9ZmaTI">Primeras Mediciones</a>
-
+- <a href="https://www.youtube.com/watch?v=e7N8kPrqs1o">Alternativa de interface</a>
 
 
