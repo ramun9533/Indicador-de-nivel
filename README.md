@@ -11,7 +11,7 @@ Dicho proyecto consta de de los siguientes componentes:
 - Cable Micro USB para conneccion a PC.
 
 _Lista de software usado_
-  - IDE arduino(en PC) 
+  - IDE arduino 
   - Processing
   
 
