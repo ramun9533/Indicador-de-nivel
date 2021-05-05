@@ -1,14 +1,16 @@
-
+int multiplox = 230;
+int multiploy = 410;
 import processing.serial.*;
 Serial PuertoMio;  
 char val;  
 PImage img ;
+
 int Posicionx, Posiciony;
 
 void setup()
 {
-  size (325, 450);
-  img = loadImage ("nivel_x_y.png");
+  size (225, 400);
+  img = loadImage ("dibujo-1.png");
   String NombrePuerto = Serial.list()[0];
   PuertoMio = new Serial(this, NombrePuerto, 9600);
 }
@@ -18,36 +20,37 @@ void   draw () {
     val = PuertoMio.readChar();         //
   }
   background(250, 0, 0);             
+
   switch(val)
   {
   case 'A': 
-    Posicionx =950; // 0%
-    Posiciony =900;
+    Posicionx = multiplox *3;
+    Posiciony =multiploy *2;
     break;
   case 'B': 
-    Posicionx =635; // 20%
-    Posiciony =900;
+    Posicionx = multiplox *2;
+    Posiciony =multiploy *2;
     break;
   case 'C': 
-    Posicionx =330; // 40%
-    Posiciony =890;
+    Posicionx = multiplox *1;
+    Posiciony =multiploy *2;
     break;
   case 'D': 
     //fill(#05FAEC); // 60%
-    Posicionx = 990;
-    Posiciony =450;
+    Posicionx = multiplox *3;
+    Posiciony =multiploy *1;
     break;
   case 'E': 
-    Posicionx = 660; // 80%
-    Posiciony =450;
+    Posicionx = multiplox *2 ;// 80%
+    Posiciony = multiploy * 1;
     break;
   case 'F': 
-    Posicionx = 330;// 100%
-    Posiciony =450;
+    Posicionx = multiplox *1;// 100% . 
+    Posiciony =multiploy * 1;
     break;
   case 'G': 
-    Posicionx =0;
-    Posiciony =0;
+    Posicionx =1000;
+    Posiciony =1000;
     break;
   }
   image (img, width-(Posicionx), height-(Posiciony));
