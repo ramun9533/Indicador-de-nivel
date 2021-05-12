@@ -25,7 +25,8 @@ void setup() {
   pinMode(o4, OUTPUT);
   pinMode(o5, OUTPUT);
   pinMode(o6, OUTPUT);
-
+  nivel3 = 'A';
+  Serial.println (nivel3);
 }
 
 void Imprime ()
