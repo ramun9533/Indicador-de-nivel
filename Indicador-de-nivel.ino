@@ -1,14 +1,14 @@
-static unsigned int l1 = 2;
-static unsigned int l2 = 3; //
-static unsigned int l3 = 4; //
-static unsigned int l4 = 5;
-static unsigned int l5 = 6 ; //
-static unsigned int o1 = 7; //
-static unsigned int o2 = 8; //
-static unsigned int o3 = 9; //
-static unsigned int o4 = 10; //
-static unsigned int o5 = 11 ; //
-static unsigned int o6 = 12 ;
+uint8_t l1 = 2;
+uint8_t l2 = 3; // abreviacion (uint8_t) enteros de 1 byte sin signo
+uint8_t l3 = 4; //
+uint8_t l4 = 5;
+uint8_t l5 = 6 ; //
+uint8_t o1 = 7; //
+uint8_t o2 = 8; //
+uint8_t o3 = 9; //
+uint8_t o4 = 10; //
+uint8_t o5 = 11 ; //
+uint8_t o6 = 12 ; 
 int L1, L2, L3, L4, L5 = 0; //variables donde guardare las entradas para hacer la logica
 int O1, O2, O3, O4, O5, O6, nivel, nivel1 = 0; // variables donde reflegare las entradas en forma de salidas, y "nivel" donde guardare el nivel
 char nivel3;
