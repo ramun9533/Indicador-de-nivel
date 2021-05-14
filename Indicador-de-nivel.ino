@@ -29,7 +29,7 @@ void setup() {
   Serial.println (nivel3);
 }
 
-void Imprime ()
+void imprime ()
 {
   Serial.println (nivel3);
 }
@@ -90,7 +90,7 @@ void loop() {
   }
   if (nivel1 != nivel)                                   // hace algo diferente
   {
-    Imprime ();                                          // hace algo diferente
+    imprime ();                                          // hace algo diferente
      //delay (1000);                                             // hace algo diferente
   }
   nivel1 = nivel;
