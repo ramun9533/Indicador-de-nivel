@@ -9,8 +9,8 @@ uint8_t o3 = 9; //
 uint8_t o4 = 10; //
 uint8_t o5 = 11 ; //
 uint8_t o6 = 12 ; 
-int L1, L2, L3, L4, L5 = 0; //variables donde guardare las entradas para hacer la logica
-int O1, O2, O3, O4, O5, O6, nivel, nivel1 = 0; // variables donde reflegare las entradas en forma de salidas, y "nivel" donde guardare el nivel
+int L1, L2, L3, L4, L5; //variables donde guardare las entradas para hacer la logica
+int O1, O2, O3, O4, O5, O6, nivel, nivel1; // variables donde reflegare las entradas en forma de salidas, y "nivel" donde guardare el nivel
 char nivel3;
 void setup() {
   Serial.begin (9600);
