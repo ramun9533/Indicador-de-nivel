@@ -14,11 +14,11 @@ int O1, O2, O3, O4, O5, O6, nivel, nivel1; // variables donde reflegare las entr
 char nivel3;
 void setup() {
   Serial.begin (9600);
-  pinMode(in1, INPUT);
-  pinMode(in2, INPUT);
-  pinMode(in3, INPUT);
-  pinMode(in4, INPUT);
-  pinMode(in5, INPUT);
+  pinMode(in1, INPUT_PULLUP);
+  pinMode(in2, INPUT_PULLUP);
+  pinMode(in3, INPUT_PULLUP);
+  pinMode(in4, INPUT_PULLUP);
+  pinMode(in5, INPUT_PULLUP);
   pinMode(out1, OUTPUT);
   pinMode(out2, OUTPUT);
   pinMode(out3, OUTPUT);
@@ -44,41 +44,41 @@ void loop() {
   digitalWrite(out3, Nivel3);
   digitalWrite(out4, Nivel4);
   digitalWrite(out5, Nivel5);
-  if (!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) //inicia el algebra boleana
+  if (Nivel1 and Nivel2 and Nivel3 and Nivel4 and Nivel5) //inicia el algebra boleana
   {
     nivel = 0;
     nivel3 = 'A';
   }
 
-  if (Nivel1 == 1)
+  if (Nivel1 == 0)
   {
     nivel = 20;
     nivel3 = 'B';
   }
-  if (Nivel2 == 1)
+  if (Nivel2 == 0)
   {
     nivel = 40;
     nivel3 = 'C';
   }
-  if (Nivel3 == 1)
+  if (Nivel3 == 0)
   { nivel = 60;
     nivel3 = 'D';
   }
 
-  if (Nivel4 == 1)
+  if (Nivel4 == 0)
   { nivel = 80;
     nivel3 = 'E';
   }
-  if (Nivel5 == 1)
+  if (Nivel5 == 0)
   { nivel = 5;
     nivel3 = 'F';
   }
-  if (!((Nivel1 and Nivel2 and Nivel3 and Nivel4 and Nivel5) or
-        (Nivel1 and Nivel2 and Nivel3 and Nivel4 and !Nivel5) or
-        (Nivel1 and Nivel2 and Nivel3 and !Nivel4 and !Nivel5) or
-        (Nivel1 and Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) or
-        (Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) or
-        (!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5)  ) )
+  if (!((!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and !Nivel5) or
+        (!Nivel1 and !Nivel2 and !Nivel3 and !Nivel4 and Nivel5) or
+        (!Nivel1 and !Nivel2 and !Nivel3 and Nivel4 and Nivel5) or
+        (!Nivel1 and !Nivel2 and Nivel3 and Nivel4 and Nivel5) or
+        (!Nivel1 and Nivel2 and Nivel3 and Nivel4 and Nivel5) or
+        (Nivel1 and Nivel2 and Nivel3 and Nivel4 and Nivel5)  ) )
   {
     nivel = 6;
     Serial.println ('G');
